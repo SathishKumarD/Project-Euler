@@ -9,23 +9,6 @@ def isprime(n):
         d+=1
     return n<d*d
 
-def next_prime(n):
-    if n==2: return 3
-    if n%2==0: n-=1
-    while not isprime(n+2):
-        n+=2
-    return n+2
-
-def before_prime(n):
-    if n==2: return 3
-    if n%2==0: n-=1
-    while not isprime(n+2):
-        n+=2
-    return n+2
-
-
-print next_prime(11)
-
 lp =2
 hp=3
 
@@ -40,6 +23,21 @@ for x in range(2,1000000):
 
 
 # In[35]:
+
+def isprime(n):
+    d=2
+    while n>d*d and not n%d ==0 :
+        d+=1
+    return n<d*d
+
+lp =2
+hp=3
+
+primes =[]
+for x in range(2,1000000):
+    if isprime(x):
+        primes.append(x)
+
 
 
 maxsumpr =0
