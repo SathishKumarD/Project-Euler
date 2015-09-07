@@ -1,12 +1,12 @@
 
 # coding: utf-8
 
-# In[19]:
+# In[3]:
 
 import datetime
 counter = 0
 start =  datetime.datetime.now()
-for x in xrange(1000):
+for x in xrange(1000000000):
     if x%10==0:
         continue
     r = x+int(str(x)[::-1])
@@ -17,12 +17,6 @@ for x in xrange(1000):
 print counter
 end =  datetime.datetime.now()
 print end-start
-        
-
-
-# In[ ]:
-
-
 
 
 # In[ ]:
